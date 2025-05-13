@@ -12,11 +12,11 @@ create table motos (
 );
 
 // insere dados em motos
-insert into motos (id_moto, modelo, placa) values ('MT001', 'Honda Biz 110i', 'ABC1A23');
-insert into motos (id_moto, modelo, placa) values ('MT002', 'Yamaha NEO 125', 'DEF4B56');
-insert into motos (id_moto, modelo, placa) values ('MT003', 'Honda CG 160', 'GHI7C89');
-insert into motos (id_moto, modelo, placa) values ('MT004', 'Yamaha Factor 150', 'JKL0D12');
-insert into motos (id_moto, modelo, placa) values ('MT005', 'Mottu Sport 110i', 'MNO3E45');
+insert into motos (id_moto, modelo, placa) values ('MT001', 'Mottu Pop', 'ABC1A23');
+insert into motos (id_moto, modelo, placa) values ('MT002', 'Mottu E', 'DEF4B56');
+insert into motos (id_moto, modelo, placa) values ('MT003', 'Mottu Pop', 'GHI7C89');
+insert into motos (id_moto, modelo, placa) values ('MT004', 'Mottu Sport', 'JKL0D12');
+insert into motos (id_moto, modelo, placa) values ('MT005', 'Mottu Sport', 'MNO3E45');
 
 // cria tabela patios
 create table patios (
@@ -27,11 +27,11 @@ create table patios (
 );
 
 // insere dados em patios
-insert into patios (id_patio, nome, telefone, endereco) values (1, 'P·tio Zona Norte', '11998765432', 'Rua A, 100 - S„o Paulo');
-insert into patios (id_patio, nome, telefone, endereco) values (2, 'P·tio Zona Sul', '11991234567', 'Rua B, 200 - S„o Paulo');
-insert into patios (id_patio, nome, telefone, endereco) values (3, 'P·tio Centro', '11990001122', 'Av. Central, 500 - S„o Paulo');
-insert into patios (id_patio, nome, telefone, endereco) values (4, 'P·tio Osasco', '11993334444', 'Rua das Flores, 321 - Osasco');
-insert into patios (id_patio, nome, telefone, endereco) values (5, 'P·tio Campinas', '11994445555', 'Av. Brasil, 101 - Campinas');
+insert into patios (id_patio, nome, telefone, endereco) values (1, 'P√°tio Zona Norte', '11998765432', 'Rua A, 100 - S√£o Paulo');
+insert into patios (id_patio, nome, telefone, endereco) values (2, 'P√°tio Zona Sul', '11991234567', 'Rua B, 200 - S√£o Paulo');
+insert into patios (id_patio, nome, telefone, endereco) values (3, 'P√°tio Centro', '11990001122', 'Av. Central, 500 - S√£o Paulo');
+insert into patios (id_patio, nome, telefone, endereco) values (4, 'P√°tio Osasco', '11993334444', 'Rua das Flores, 321 - Osasco');
+insert into patios (id_patio, nome, telefone, endereco) values (5, 'P√°tio Campinas', '11994445555', 'Av. Brasil, 101 - Campinas');
 
 // cria tabela pontos_leitura
 create table pontos_leitura (
@@ -45,11 +45,11 @@ create table pontos_leitura (
 );
 
 // insere dados em pontos_leitura
-insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (101, 1, 'Entrada Principal', 'Acesso principal ao p·tio Zona Norte');
-insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (102, 1, 'SaÌda Lateral', 'SaÌda para a rua lateral');
-insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (201, 2, 'Port„o 1', 'Entrada do p·tio Zona Sul');
-insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (301, 3, 'C‚mera Central', 'Ponto de leitura com c‚mera');
-insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (401, 4, 'Port„o Traseiro', 'Port„o nos fundos do p·tio Osasco');
+insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (101, 1, 'Entrada Principal', 'Acesso principal ao p√°tio Zona Norte');
+insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (102, 1, 'Sa√≠da Lateral', 'Sa√≠da para a rua lateral');
+insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (201, 2, 'Port√£o 1', 'Entrada do p√°tio Zona Sul');
+insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (301, 3, 'C√¢mera Central', 'Ponto de leitura com c√¢mera');
+insert into pontos_leitura (ID_PONTO, ID_PATIO, NOME_PONTO, DESCRICAO) values (401, 4, 'Port√£o Traseiro', 'Port√£o nos fundos do p√°tio Osasco');
 
 // cria tabela movimentacoes
 create table movimentacoes (
@@ -70,10 +70,10 @@ insert into movimentacoes (id_moto, id_ponto, data_hora) values ('MT002', 201, t
 insert into movimentacoes (id_moto, id_ponto, data_hora) values ('MT003', 301, to_timestamp('2025-05-01 11:15:00', 'YYYY-MM-DD HH24:MI:SS'));
 insert into movimentacoes (id_moto, id_ponto, data_hora) values ('MT004', 401, to_timestamp('2025-05-01 12:45:00', 'YYYY-MM-DD HH24:MI:SS'));
 
-// habilita saÌda do console
+// habilita sa√≠da do console
 set serveroutput on;
 
-// bloco 1: total de movimentaÁıes por moto
+// bloco 1: total de movimenta√ß√µes por moto
 declare
   v_id_moto motos.id_moto%type;
   v_modelo motos.modelo%type;
@@ -87,12 +87,12 @@ begin
     v_id_moto := moto_rec.id_moto;
     v_modelo := moto_rec.modelo;
     v_total_movimentacoes := moto_rec.total_movimentacoes;
-    dbms_output.put_line('Moto: ' || v_id_moto || ' - Modelo: ' || v_modelo || ' - MovimentaÁıes: ' || v_total_movimentacoes);
+    dbms_output.put_line('Moto: ' || v_id_moto || ' - Modelo: ' || v_modelo || ' - Movimenta√ß√µes: ' || v_total_movimentacoes);
   end loop;
 end;
 /
 
-// bloco 2: total de movimentaÁıes por p·tio
+// bloco 2: total de movimenta√ß√µes por p√°tio
 declare
   v_nome_patio patios.nome%type;
   v_total_mov number;
@@ -104,12 +104,12 @@ begin
   ) loop
     v_nome_patio := patio_rec.nome_patio;
     v_total_mov := patio_rec.total_mov;
-    dbms_output.put_line('P·tio: ' || v_nome_patio || ' - MovimentaÁıes: ' || v_total_mov);
+    dbms_output.put_line('P√°tio: ' || v_nome_patio || ' - Movimenta√ß√µes: ' || v_total_mov);
   end loop;
 end;
 /
 
-//bloco 3: mostra data atual, anterior e prÛxima de movimentaÁıes
+//bloco 3: mostra data atual, anterior e pr√≥xima de movimenta√ß√µes
 declare
   cursor c_mov is
     select data_hora from movimentacoes order by data_hora;
@@ -138,7 +138,7 @@ begin
     end if;
     dbms_output.put_line('Anterior: ' || nvl(to_char(v_anterior, 'YYYY-MM-DD HH24:MI:SS'), 'Vazio') || 
                          ' | Atual: ' || to_char(v_atual, 'YYYY-MM-DD HH24:MI:SS') || 
-                         ' | PrÛximo: ' || nvl(to_char(v_proximo, 'YYYY-MM-DD HH24:MI:SS'), 'Vazio'));
+                         ' | Pr√≥ximo: ' || nvl(to_char(v_proximo, 'YYYY-MM-DD HH24:MI:SS'), 'Vazio'));
   end loop;
 end;
 /
